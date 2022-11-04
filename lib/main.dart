@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home.dart';
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
  // await Firebase.initializeApp();
@@ -13,72 +15,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Home(),
-    );
-  }
-}
-
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
-
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
-
-  int _selectedScreenIndex = 0;
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text('page 1'),
-    Text('page 2'),
-    Text('page 3'),
-  ];
-
-  void _selectScreen(int index) {
-    setState(() {
-      _selectedScreenIndex = index;
-    });
-  }
-  
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedScreenIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        // showSelectedLabels: false,
-        // showUnselectedLabels: false,
-        unselectedItemColor: Colors.black87,
-        selectedItemColor: const Color(0xFF26A3F7),
-        currentIndex: _selectedScreenIndex,
-        onTap: _selectScreen,
-        // backgroundColor: const Color(0xff191919),
-        items: const [
-          BottomNavigationBarItem(
-            icon: ImageIcon(
-              AssetImage("assets/home.png"),
-            ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(
-              AssetImage("assets/play.png"),
-            ),
-            label: 'Videos',
-          ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(
-              AssetImage("assets/cate.png"),
-            ),
-            label: 'Opportunities',
-          ),
-        ],
-      ),
+      home: const Directionality(
+        textDirection: TextDirection.rtl,
+          child: Home()),
     );
   }
 }

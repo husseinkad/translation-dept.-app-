@@ -21,7 +21,7 @@ class _MyDrawerState extends State<MyDrawer> {
           width: double.infinity,
           height: 145,
           padding: const EdgeInsets.only(top: 20.0),
-          child: Center(child: Image.asset('assets/passionDarkMode.png', fit: BoxFit.cover, )),
+          child: Center(child: Image.asset('assets/menu.png', fit: BoxFit.cover, )),
         ),
         Row(
             children: const [
@@ -58,16 +58,19 @@ class _MyDrawerState extends State<MyDrawer> {
                   ),
                 ]
             ),
-            const SizedBox(height: 13,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                IconButton(onPressed: () => selectedItem(context, 5), icon: const Icon(Icons.web, color: Colors.white70,)),
-                IconButton(onPressed: () => selectedItem(context, 2), icon: const Icon(Icons.send_outlined, color: Colors.white70, )),
-                IconButton(onPressed: () => selectedItem(context, 3), icon: const Icon(Icons.groups_outlined, color: Colors.white70,)),
-                IconButton(onPressed: () => selectedItem(context, 4), icon: Image.asset('assets/Linkedin.png', color: Colors.white70,)),
-              ],
-            ),
+            buildMenuItem(text: 'مطور التطبيق', icon: Icons.code_outlined, onClicked: () => selectedItem(context, 6)),
+            buildMenuItem(text: 'التبليغات والاقتراحات', icon: Icons.report_problem_outlined, onClicked: () => selectedItem(context, 9)),
+            buildMenuItem(text: 'مشاركه التطبيق', icon: Icons.share_outlined, onClicked: () => selectedItem(context, 7)),
+
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.start,
+            //   children: [
+            //     IconButton(onPressed: () => selectedItem(context, 5), icon: const Icon(Icons.web, color: Colors.white70,)),
+            //     IconButton(onPressed: () => selectedItem(context, 2), icon: const Icon(Icons.send_outlined, color: Colors.white70, )),
+            //     IconButton(onPressed: () => selectedItem(context, 3), icon: const Icon(Icons.groups_outlined, color: Colors.white70,)),
+            //     IconButton(onPressed: () => selectedItem(context, 4), icon: Image.asset('assets/Linkedin.png', color: Colors.white70,)),
+            //   ],
+            // ),
 
           ],
         ),

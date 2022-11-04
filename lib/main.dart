@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+ // await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -51,11 +53,11 @@ class _HomeState extends State<Home> {
       bottomNavigationBar: BottomNavigationBar(
         // showSelectedLabels: false,
         // showUnselectedLabels: false,
-        unselectedItemColor: Colors.white54,
+        unselectedItemColor: Colors.black87,
         selectedItemColor: const Color(0xFF26A3F7),
         currentIndex: _selectedScreenIndex,
         onTap: _selectScreen,
-        backgroundColor: const Color(0xff191919),
+        // backgroundColor: const Color(0xff191919),
         items: const [
           BottomNavigationBarItem(
             icon: ImageIcon(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home_page.dart';
+
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -12,7 +14,7 @@ class _HomeState extends State<Home> {
 
   int _selectedScreenIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
-    Text('page 1'),
+    HomePage(),
     Text('page 2'),
     Text('page 3'),
   ];

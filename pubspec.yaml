@@ -35,6 +35,18 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.1.6
+  url_launcher: ^6.0.17
+  cached_network_image: ^3.2.0
+  shimmer: ^2.0.0
+  introduction_screen: ^3.0.2
+  shared_preferences: ^2.0.15
+  get: ^4.6.5
+  firebase_core: ^1.20.0
+  cloud_firestore: ^3.4.3
+  firebase_storage: ^10.3.4
+  flutter_share: ^2.0.0
+  firebase_messaging: ^12.0.1
+  flutter_local_notifications: ^9.1.4
 
 dev_dependencies:
   flutter_test:
@@ -73,6 +85,13 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+
+  fonts:
+    - family: dinar
+      fonts:
+        - asset: fonts/dinar.otf
+          weight: 500
+
   # fonts:
   #   - family: Schyler
   #     fonts:

@@ -24,44 +24,46 @@ class _MyDrawerState extends State<MyDrawer> {
           padding: const EdgeInsets.only(top: 20.0),
           child: Center(child: Image.asset('assets/menu.png', fit: BoxFit.cover, )),
         ),
+
         Row(
             children: const [
               Expanded(
-                  child: Divider(color: Colors.white70,)
+                  child: Divider(color: Colors.black87,)
               ),
 
-              Text('  دعم التطبيق  ', style: TextStyle(fontSize: 15, fontFamily: 'Tajawal', color: Colors.white70, overflow: TextOverflow.clip),),
+              Text('  قسم الترجمه  ', style: TextStyle(fontSize: 15, fontFamily: 'dinar', color: Colors.black87, overflow: TextOverflow.clip),),
 
               Expanded(
-                  child: Divider(color: Colors.white70,)
+                  child: Divider(color: Colors.black87,)
+              ),
+            ]
+        ),
+        buildMenuItem(text: 'تعريف عن القسم', icon: Icons.g_translate_outlined, onClicked: () => selectedItem(context, 1)),
+        buildMenuItem(text: 'مواقع القسم', icon: Icons.location_on_outlined, onClicked: () => selectedItem(context, 2)),
+        // buildMenuItem(text: 'مشاركه التطبيق', icon: Icons.share_outlined, onClicked: () => selectedItem(context, 7)),
+
+
+        Row(
+            children: const [
+              Expanded(
+                  child: Divider(color: Colors.black87,)
+              ),
+
+              Text('  دعم التطبيق  ', style: TextStyle(fontSize: 15, fontFamily: 'dinar', color: Colors.black87, overflow: TextOverflow.clip),),
+
+              Expanded(
+                  child: Divider(color: Colors.black87,)
               ),
             ]
         ),
         const SizedBox(height: 13,),
         Column(
           children: [
-            buildMenuItem(text: 'التبليغات والاقتراحات', icon: Icons.report_problem_outlined, onClicked: () => selectedItem(context, 9)),
-            const SizedBox(height: 13,),
-            buildMenuItem(text: 'مشاركه التطبيق', icon: Icons.share_outlined, onClicked: () => selectedItem(context, 7)),
-            const SizedBox(height: 13,),
-            buildMenuItem(text: 'مطور التطبيق', icon: Icons.code_outlined, onClicked: () => selectedItem(context, 6)),
-            const SizedBox(height: 13,),
-            Row(
-                children: const [
-                  Expanded(
-                      child: Divider(color: Colors.white70,)
-                  ),
-
-                  Text('  مواقع المنصه  ', style: TextStyle(fontSize: 15, fontFamily: 'Tajawal', color: Colors.white70, overflow: TextOverflow.clip),),
-
-                  Expanded(
-                      child: Divider(color: Colors.white70,)
-                  ),
-                ]
-            ),
             buildMenuItem(text: 'مطور التطبيق', icon: Icons.code_outlined, onClicked: () => selectedItem(context, 6)),
             buildMenuItem(text: 'التبليغات والاقتراحات', icon: Icons.report_problem_outlined, onClicked: () => selectedItem(context, 9)),
             buildMenuItem(text: 'مشاركه التطبيق', icon: Icons.share_outlined, onClicked: () => selectedItem(context, 7)),
+
+
 
             // Row(
             //   mainAxisAlignment: MainAxisAlignment.start,
@@ -83,34 +85,18 @@ class _MyDrawerState extends State<MyDrawer> {
     required IconData icon,
     VoidCallback? onClicked,
   }) {
-    const color = Colors.white70;
+    const color = Colors.black87;
     const hoverColor = Colors.blue;
 
     return ListTile(
       leading: Icon(icon, color: color,),
-      title: Text(text, style: const TextStyle(fontSize: 15, fontFamily: 'Tajawal', color: color),),
-      hoverColor: hoverColor,
-      onTap: onClicked ,
-
-    );
-  }
-
-  Widget bulidMenuItem2({
-    required String text,
-    required String image,
-    VoidCallback? onClicked,
-  }) {
-    const color = Colors.white70;
-    const hoverColor = Colors.blue;
-
-    return ListTile(
-      leading: Image.asset(image, color: color,),
       title: Text(text, style: textStyleSmall),
       hoverColor: hoverColor,
       onTap: onClicked ,
 
     );
   }
+
   String Instagram = 'https://www.instagram.com/xbr.dev/';
   void insta() async {
     if (!await launch(Instagram)) throw 'حدث خطا ما $Instagram';

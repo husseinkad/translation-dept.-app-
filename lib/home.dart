@@ -40,12 +40,12 @@ class _HomeState extends State<Home> {
           onPressed: () {
             scaffoldKey.currentState!.openDrawer();
           },
-          icon: Image.asset('assets/menu.png', color: Colors.white70,),
+          icon: Image.asset('assets/menu.png', color: Colors.black87,),
         ),
         title: const Text('تطبيق قسم الترجمه', style: textStyleNormal),
       ),
       drawer: Drawer(
-        backgroundColor: Colors.black54,
+        //backgroundColor: Colors.white70,
         child: SingleChildScrollView(
           padding: padding,
           child: Column(

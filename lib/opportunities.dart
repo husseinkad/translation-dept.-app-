@@ -14,32 +14,34 @@ class _OpportunitiesState extends State<Opportunities> {
       child: Column(
         children: [
       SizedBox(
-      height: MediaQuery.of(context).size.height * 0.03,
+      height: MediaQuery.of(context).size.height * 0.07,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           shrinkWrap: true,
           itemCount: 4,
           itemBuilder: (context, index){
             return SizedBox(
-                height: MediaQuery.of(context).size.height * 0.03,
+                height: MediaQuery.of(context).size.height * 0.06,
                 width: MediaQuery.of(context).size.width * 0.4,
-                child: const Card());
+                child: Card(
+                  shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(9)),
+                ));
           }
       ),
     ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.35,
-            child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                shrinkWrap: true,
-                itemCount: 4,
-                itemBuilder: (context, index){
-                  return SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.35,
-                      width: MediaQuery.of(context).size.width * 0.9,
-                      child: const Card());
-                }
-            ),
+          ListView.builder(
+              scrollDirection: Axis.vertical,
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: 4,
+              itemBuilder: (context, index){
+                return SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.35,
+                 //   width: MediaQuery.of(context).size.width * 0.1,
+                    child: Card(
+                      shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(9)),
+                    ));
+              }
           ),
         ],
       ),

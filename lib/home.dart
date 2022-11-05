@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:translation_dept/lectures.dart';
+import 'package:translation_dept/opportunities.dart';
 import 'package:translation_dept/utiles/styles.dart';
 
 import 'home_page.dart';
@@ -22,7 +23,7 @@ class _HomeState extends State<Home> {
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
     Lectures(),
-    Text('page 3'),
+    Opportunities()
   ];
 
   void _selectScreen(int index) {

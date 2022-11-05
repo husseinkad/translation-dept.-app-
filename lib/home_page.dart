@@ -17,15 +17,15 @@ class _HomePageState extends State<HomePage> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            gradeCard('مرحلى اوله', Icons.style_outlined, (){}, context),
-            gradeCard('مرحلى ثانيه', Icons.my_library_books_outlined, (){}, context),
+            gradeCard('المرحلة الاولة', Icons.style_outlined, (){}, context),
+            gradeCard('المرحلة الثانية', Icons.my_library_books_outlined, (){}, context),
           ],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-           gradeCard('مرحلى ثالثه', Icons.class_outlined, (){}, context),
-           gradeCard('مرحلى رابعه', Icons.person_outlined, (){}, context),
+           gradeCard('المرحلة الثالثة', Icons.class_outlined, (){}, context),
+           gradeCard('المرحلة الرابعة', Icons.person_outlined, (){}, context),
           ],
         ),
       ],

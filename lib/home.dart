@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:translation_dept/lectures.dart';
 import 'package:translation_dept/utiles/styles.dart';
 
 import 'home_page.dart';
@@ -20,7 +21,7 @@ class _HomeState extends State<Home> {
 
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    Text('page 2'),
+    Lectures(),
     Text('page 3'),
   ];
 
@@ -42,7 +43,7 @@ class _HomeState extends State<Home> {
           },
           icon: Image.asset('assets/menu.png', color: Colors.black87,),
         ),
-        title: const Text('تطبيق قسم الترجمه', style: textStyleNormal),
+        title: const Text('قسم الترجمه', style: textStyleBiggerThanNormal),
       ),
       drawer: Drawer(
         //backgroundColor: Colors.white70,
@@ -74,13 +75,13 @@ class _HomeState extends State<Home> {
             icon: ImageIcon(
               AssetImage("assets/home.png"),
             ),
-            label: 'الصفحه الرئيسيه',
+            label: 'الرئيسية',
           ),
           BottomNavigationBarItem(
             icon: ImageIcon(
               AssetImage("assets/play.png"),
             ),
-            label: 'المقاطع التعليميه',
+            label: 'المحاضرات',
           ),
           BottomNavigationBarItem(
             icon: ImageIcon(

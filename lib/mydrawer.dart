@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:translation_dept/utiles/styles.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_share/flutter_share.dart';
 
@@ -104,7 +105,7 @@ class _MyDrawerState extends State<MyDrawer> {
 
     return ListTile(
       leading: Image.asset(image, color: color,),
-      title: Text(text, style: const TextStyle(fontSize: 15, fontFamily: 'Tajawal', color: color),),
+      title: Text(text, style: textStyleSmall),
       hoverColor: hoverColor,
       onTap: onClicked ,
 

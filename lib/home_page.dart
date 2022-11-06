@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            gradeCard('المرحلة الاولة', Icons.style_outlined, (){}, context),
+            gradeCard('المرحلة الاولى', Icons.style_outlined, (){}, context),
             gradeCard('المرحلة الثانية', Icons.my_library_books_outlined, (){}, context),
           ],
         ),

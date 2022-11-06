@@ -22,7 +22,15 @@ class _MyDrawerState extends State<MyDrawer> {
           width: double.infinity,
           height: 145,
           padding: const EdgeInsets.only(top: 20.0),
-          child: Center(child: Image.asset('assets/logo.png', fit: BoxFit.cover, )),
+          child: Center(child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Icon(Icons.translate, color: Colors.blue,),
+            ),
+            Text('.Translation dept', style: textStyleLogo,)
+          ],)),
         ),
 
         Row(

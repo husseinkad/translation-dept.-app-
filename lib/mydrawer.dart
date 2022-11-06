@@ -22,7 +22,7 @@ class _MyDrawerState extends State<MyDrawer> {
           width: double.infinity,
           height: 145,
           padding: const EdgeInsets.only(top: 20.0),
-          child: Center(child: Image.asset('assets/menu.png', fit: BoxFit.cover, )),
+          child: Center(child: Image.asset('assets/logo.png', fit: BoxFit.cover, )),
         ),
 
         Row(

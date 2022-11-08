@@ -18,19 +18,22 @@ class _OpportunitiesState extends State<Opportunities> {
         padding: const EdgeInsets.all(8.0),
         child: SizedBox(
         height: MediaQuery.of(context).size.height * 0.07,
-        child: ListView.builder(
-            scrollDirection: Axis.horizontal,
+        child: GridView.builder(
+          scrollDirection: Axis.horizontal,
+          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+              maxCrossAxisExtent: 200,
+              childAspectRatio: 1 / 2,
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10
+          ),
             shrinkWrap: true,
             itemCount: 4,
             itemBuilder: (context, index){
-              return SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.06,
-                  width: MediaQuery.of(context).size.width * 0.4,
-                  child: Card(
-                    shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(9)),
-                    child: const Center(child: Text('فرص العمل', style: textStyleSmall,),),
-                  ));
-            }
+              return Container(
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), border: Border.all(width: 1, color: Color(0xFF26A3F7))),
+                child: const Center(child: Text('فرص العمل', style: textStyleSmall,),),
+              );
+            },
         ),
     ),
       ),
@@ -67,7 +70,7 @@ class _OpportunitiesState extends State<Opportunities> {
                                     padding: EdgeInsets.all(8.0),
                                     child: Text('وضائف', style: textStyleNormalNoFont,),
                                   ),
-                                  SizedBox(width: 100,),
+                                  SizedBox(width: 60,),
                                   Padding(
                                     padding: EdgeInsets.all(8.0),
                                     child: Icon(Icons.credit_card, color: Color(0xFF26A3F7)),
@@ -89,7 +92,7 @@ class _OpportunitiesState extends State<Opportunities> {
                                     padding: EdgeInsets.all(8.0),
                                     child: Text('22/11/6',),
                                   ),
-                                  SizedBox(width: 100,),
+                                  SizedBox(width: 60,),
                                   Padding(
                                     padding: EdgeInsets.all(8.0),
                                     child: Icon(Icons.calendar_today_outlined, color: Color(0xFF26A3F7),),

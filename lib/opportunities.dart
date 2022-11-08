@@ -45,79 +45,88 @@ class _OpportunitiesState extends State<Opportunities> {
                   return SizedBox(
                       height: MediaQuery.of(context).size.height * 0.35,
                    //   width: MediaQuery.of(context).size.width * 0.1,
-                      child: Card(
-                        shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(9)),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Text('مترجم فوري', style: textStyleBig,),
-                            ),
-                            Row(
-                              children: const [
-                                Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Icon(Icons.apps),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Text('وضائف', style: textStyleNormal,),
-                                ),
-                                SizedBox(width: 100,),
-                                Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Icon(Icons.credit_card),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Text('\$1000',),
-                                ),
-                              ],
-                            ),
-
-                            Row(
-                              children: const [
-                                Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Icon(Icons.calendar_today_outlined),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Text('22/11/6',),
-                                ),
-                                SizedBox(width: 100,),
-                                Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Icon(Icons.calendar_today_outlined),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Text('22/11/6',),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              children: const [
-                                Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Icon(Icons.location_on_outlined),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Text('السفاره الامريكيه في بغداد', style: textStyleNormal,),
-                                ),
-                              ],
-                            ),
-
-                            const Center(
-                              child: Padding(
-                                padding: EdgeInsets.all(20.0),
-                                child: Text('عرض التفاصيل', style: textStyleBig,),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), border: Border.all(width: 0.3)),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text('مترجم فوري', style: textStyleBig,),
                               ),
-                            ),
+                              Row(
+                                children: const [
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Icon(Icons.apps, color: Color(0xFF26A3F7)),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Text('وضائف', style: textStyleNormalNoFont,),
+                                  ),
+                                  SizedBox(width: 100,),
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Icon(Icons.credit_card, color: Color(0xFF26A3F7)),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Text('\$1000',),
+                                  ),
+                                ],
+                              ),
 
-                          ],
+                              Row(
+                                children: const [
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Icon(Icons.calendar_today_outlined, color: Color(0xFF26A3F7)),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Text('22/11/6',),
+                                  ),
+                                  SizedBox(width: 100,),
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Icon(Icons.calendar_today_outlined, color: Color(0xFF26A3F7),),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Text('22/11/6',),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: const [
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Icon(Icons.location_on_outlined, color: Color(0xFF26A3F7)),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Text('السفاره الامريكيه في بغداد', style: textStyleNormalNoFont,),
+                                  ),
+                                ],
+                              ),
+
+                              Center(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Container(
+                                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: Colors.blue.withOpacity(0.1)),
+                                      child: const Padding(
+                                        padding: EdgeInsets.all(8.0),
+                                        child: Text('عرض التفاصيل', style: textStyleLogo,),
+                                      )),
+                                ),
+                              ),
+
+                            ],
+                          ),
                         ),
                       ));
                 }

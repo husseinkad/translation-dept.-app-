@@ -103,6 +103,7 @@ class _OpportunitiesState extends State<Opportunities> {
                                   ),
                                 ],
                               ),
+
                               Row(
                                 children: const [
                                   Padding(

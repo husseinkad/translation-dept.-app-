@@ -12,5 +12,3 @@ const textStyleLogo = TextStyle(color: Colors.blue, fontFamily: 'dinar', fontSiz
 const textStyleBiggerThanNormal = TextStyle(color: Colors.black87, fontFamily: 'dinar', fontSize: 22);
 
 const textStyleBig = TextStyle(color: Colors.black87, fontFamily: 'dinar', fontSize: 24);
-
-
